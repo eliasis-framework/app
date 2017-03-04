@@ -22,8 +22,8 @@ use Eliasis\App\App;
     <body>
         <?php Hook::run('afterBody');?>
         <?php require(App::path('pages') . 'home.php'); ?>
+
     </body>
-    
     <?php require(App::path('elements') . 'footer.php'); ?>
 
 </html>

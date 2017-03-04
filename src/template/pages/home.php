@@ -11,6 +11,7 @@
 
 use Eliasis\Hook\Hook;
 ?>
+
         <!--
          * Animated butterfly logo 
          * @author  Varga László

@@ -11,7 +11,8 @@
 
 namespace App\Modules\ForkMeGitHub\Controller;
 
-use Josantonius\Asset\Asset;
+use Josantonius\Asset\Asset,
+    Eliasis\Controller\Controller;
     
 /**
  * Module main controller.

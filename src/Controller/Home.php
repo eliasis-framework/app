@@ -86,10 +86,6 @@ class Home extends Controller {
      */
 	public function render() {
 
-        $views = array('header', 'home', 'footer');
-
-        self::$view->renderizate(App::path('elements') . $views[0]);
-        self::$view->renderizate(App::path('pages')    . $views[1]);
-        self::$view->renderizate(App::path('elements') . $views[2]);
+        self::$view->renderizate(App::path('layout') . 'default');
 	}
 }

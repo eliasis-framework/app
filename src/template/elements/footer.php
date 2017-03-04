@@ -11,6 +11,5 @@
 
 use Eliasis\Hook\Hook;
 ?>      
-
     <?php Hook::run('js'); ?>
     <?php Hook::run('footer'); ?>
