@@ -25,7 +25,7 @@ Puedes instalar esta aplicación utilizando [Composer](http://getcomposer.org/do
 
 ### Requisitos
 
-Este framework es soportada por versiones de PHP 5.6 o superiores y es compatible con versiones de HHVM 3.0 o superiores.
+Este framework es soportado por versiones de PHP 5.6 o superiores y es compatible con versiones de HHVM 3.0 o superiores.
 
 ### Contribuir
 1. Comprobar si hay incidencias abiertas o abrir una nueva para iniciar una discusión en torno a un fallo o función.
