@@ -9,7 +9,7 @@
  * @since      1.0.0
  */
 
-namespace App\Modules\ForkMeGitHub\Controller;
+namespace App\Modules\ForkMeGithub\Controller;
 
 use Josantonius\Asset\Asset,
     Eliasis\Controller\Controller;
@@ -19,9 +19,9 @@ use Josantonius\Asset\Asset,
  *
  * @since 1.0.0
  */
-class ForkMeGitHub extends Controller {
+class ForkMeGithub extends Controller {
 
-    const ASSETS_URL = MODULES_URL . 'ForkMeGitHub' . DS . 'assets' . DS;
+    const ASSETS_URL = MODULES_URL . 'fork-me-github' . DS . 'assets' . DS;
 
     /**
      * Actions for css hook.

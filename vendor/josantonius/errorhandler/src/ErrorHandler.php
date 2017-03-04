@@ -96,7 +96,7 @@ class ErrorHandler {
      *        string $e->getTrace()[0]['type']     → type exception launcher
      *        array  $e->getTrace()[0]['args']     → args exception launcher
      *
-     *        Optionally for libraries used in JST PHP Framework:
+     *        Optionally for libraries used in Eliasis PHP Framework:
      *        int    $e->statusCode → HTTP response status code
      */
     public function exception($e) {

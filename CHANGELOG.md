@@ -23,4 +23,5 @@
 * Added `App\Model\Home` class.
 
 * Added `config/paths.php` settings file.
+* Added `config/routes.php` settings file.
 * Added `config/namespaces.php` settings file.

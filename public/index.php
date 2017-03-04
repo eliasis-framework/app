@@ -11,7 +11,7 @@
 
 $DS = DIRECTORY_SEPARATOR;
 
-require dirname(__DIR__) . $DS . 'vendor' . $DS . 'autoload.php';
+$loader = require dirname(__DIR__) . $DS . 'vendor' . $DS . 'autoload.php';
 
 use Eliasis\App\App,
     Josantonius\LoadTime\LoadTime;
@@ -20,4 +20,8 @@ LoadTime::start();
 
 new App(dirname(__DIR__));
 
-//print_r('Executed in: ' . LoadTime::end() . ' seconds.');
+/**
+ * Show runtime.
+ * 
+ * print_r('Executed in: ' . LoadTime::end() . ' seconds.');
+ */

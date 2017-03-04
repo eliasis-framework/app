@@ -9,10 +9,9 @@
  * @since      1.0.0
  */
 
-namespace App\Modules\ForkMeGitHub;
+namespace App\Modules\ForkMeGithub;
 
-use Eliasis\App\App,
-    Eliasis\Hook\Hook,
+use Eliasis\Hook\Hook,
     Eliasis\Module\Module;
     
 /**
@@ -20,7 +19,7 @@ use Eliasis\App\App,
  *
  * @since 1.0.0
  */
-class ForkMeGitHub extends Module {
+class ForkMeGithub extends Module {
 
     /**
      * Add routes.
