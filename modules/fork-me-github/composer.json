@@ -1,17 +1,16 @@
 {
-    "name":        "eliasis-framework/app",
+    "name":        "eliasis-framework/fork-me-github",
     "version":     "1.0.0",
-    "description": "Basic app for Eliasis PHP Framework",
-    "type": "project",
+    "description": "Eliasis PHP Framework module: Show strip 'Fork me on GitHub' on top-right of the page",
+    "type": "eliasis-module",
     "keywords": [
         "Eliasis",
         "Framework", 
-        "HMVC", 
+        "Strip",
+        "Fork me on GitHub",
+        "HMVC",
         "PHP"
     ],
-    "config": {
-        "vendor-dir": "lib/vendor"
-    },
     "license": "MIT",
     "authors": [
         {
@@ -24,19 +23,16 @@
     "minimum-stability": "dev",
     "prefer-stable" : true,
     "support": {
-        "issues": "https://github.com/eliasis-framework/app/issues",
+        "issues": "https://github.com/Eliasis-Framework/fork-me-github/issues",
         "forum": "http://stackoverflow.com/tags/eliasis",
-        "source": "https://github.com/eliasis-framework/app"
+        "source": "https://github.com/Eliasis-Framework/fork-me-github"
     },
     "require": {
-        "php": "^5.6 || ^7.0",
-        "eliasis-framework/eliasis": "^1.0.0",
-        "eliasis-framework/fork-me-github": "^1.0.0",
-        "Josantonius/LoadTime": "^1.1.0"
+        "eliasis-framework/installers": "*"
     },
     "autoload": {
         "psr-4": {
-            "App\\" : "src/"
+            "App\\Modules\\ForkMeGitHub\\" : "/src"
         }
     }
 }

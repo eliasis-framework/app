@@ -2,7 +2,7 @@ phpunit.xml
 composer.phar
 composer.lock
 composer-test.lock
-lib/
+vendor/
 build/artifacts/
 artifacts/
 docs/_build

@@ -4,6 +4,6 @@
 		 * @author  Beben Koben
 		 * @link    http://codepen.io/beben-koben/pen/BoLyf
 		-->
-		<a id="forkMe" href="https://github.com/Eliasis-Framework/Eliasis" rel="nofollow" target="_blank">
+		<a id="forkMe" href="https://github.com/Eliasis-Framework" rel="nofollow" target="_blank">
 			Fork me on GitHub
 		</a>

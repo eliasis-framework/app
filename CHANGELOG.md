@@ -1,16 +1,6 @@
 # CHANGELOG
 
-## 1.0.0 - 2017-03-04
-
-* Added `App\Modules\ForkMeGitHub\ForkMeGitHub` class.
-* Added `App\Modules\ForkMeGitHub\ForkMeGitHub::setRoutes()` method.
-* Added `App\Modules\ForkMeGitHub\ForkMeGitHub::setHooks()` method.
-
-* Added `App\Modules\ForkMeGitHub\Controller\ForkMeGitHub` class.
-* Added `App\Modules\ForkMeGitHub\Controller\ForkMeGitHub::css()` method.
-* Added `App\Modules\ForkMeGitHub\Controller\ForkMeGitHub::top()` method.
-
-* Added `App\Modules\ForkMeGitHub\Model\ForkMeGitHub` class.
+## 1.0.0 - 2017-03-05
 
 * Added `App\Controller\Home` class.
 * Added `App\Controller\Home->setHooks()` method.
@@ -22,6 +12,23 @@
 
 * Added `App\Model\Home` class.
 
+* Added `fork-me-github` module.
+
 * Added `config/paths.php` settings file.
 * Added `config/routes.php` settings file.
 * Added `config/namespaces.php` settings file.
+
+* Added `public/index.php` file.
+* Added `public/.htaccess` file.
+* Added `public/css/alerts.css` file.
+* Added `public/css/error.css` file.
+* Added `public/css/style.css` file.
+
+* Added `src/template/footer.php` file.
+* Added `src/template/header.php` file.
+* Added `src/template/error/404.php` file.
+* Added `src/template/pages/home.php` file.
+
+* Added `eliasis-framework/eliasis` framework.
+* Added `Josantonius/LoadTime` library.
+
