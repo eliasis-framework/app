@@ -1,6 +1,6 @@
 {
     "name":        "eliasis-framework/app",
-    "version":     "1.0.0",
+    "version":     "1.0.1",
     "description": "Basic app for Eliasis PHP Framework",
     "type": "project",
     "keywords": [
