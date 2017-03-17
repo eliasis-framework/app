@@ -9,7 +9,7 @@
  * @since      1.0.0
  */
 
-use Eliasis\Hook\Hook;
+use Josantonius\Hook\Hook;
 ?>      
     <?php Hook::run('js'); ?>
     <?php Hook::run('footer'); ?>

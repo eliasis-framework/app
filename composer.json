@@ -30,9 +30,14 @@
     },
     "require": {
         "php": "^5.6 || ^7.0",
-        "eliasis-framework/eliasis": "^1.0.0",
-        "eliasis-framework/fork-me-github": "^1.0.0",
-        "Josantonius/LoadTime": "^1.1.0"
+        "eliasis-framework/eliasis"        : "^1.0.0",
+        "eliasis-framework/fork-me-github" : "^1.0.0",
+        "Josantonius/LoadTime"             : "^1.1.0",
+        "Josantonius/Hook"                 : "^1.0.0",
+        "Josantonius/Router"               : "^1.0.0",
+        "Josantonius/Cleaner"              : "^1.1.0",
+        "Josantonius/Asset"                : "^1.1.0",
+        "Josantonius/ErrorHandler"         : "^1.1.1"
     },
     "autoload": {
         "psr-4": {

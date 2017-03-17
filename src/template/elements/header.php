@@ -9,7 +9,7 @@
  * @since      1.0.0
  */
 
-use Eliasis\Hook\Hook;
+use Josantonius\Hook\Hook;
 ?>
     <head>
         <!-- Site meta -->
@@ -17,7 +17,7 @@ use Eliasis\Hook\Hook;
         <meta charset="utf-8">
         <?php Hook::run('meta') ?> 
         <!-- Title -->
-        <title>sss</title>
+        <title>Eliasis PHP Framework</title>
 
         <!-- CSS -->
         <?php Hook::run('css') ?>

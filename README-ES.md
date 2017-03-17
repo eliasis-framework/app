@@ -11,8 +11,8 @@
 - [Instalación](#instalación)
 - [Requisitos](#requisitos)
 - [Contribuir](#contribuir)
-- [Autor](#autor)
 - [Licencia](#licencia)
+- [Copyright](#copyright)
 
 ---
 Estructura para crear aplicaciones con [Eliasis Framework](https://github.com/Eliasis-Framework/Eliasis).
@@ -36,10 +36,12 @@ Este framework es soportado por versiones de PHP 5.6 o superiores y es compatibl
 
 Esto está pensado para proyectos grandes y de larga duración.
 
-### Autor
-
-Mantenido por [Josantonius](https://github.com/Josantonius/).
-
 ### Licencia
 
 Este proyecto está licenciado bajo la **licencia MIT**. Consulta el archivo [LICENSE](LICENSE) para más información.
+
+## Copyright
+
+2017 Josantonius, [josantonius.com](https://josantonius.com/)
+
+Si te ha resultado útil... ¡házmelo saber! Sígueme en [Twitter](https://twitter.com/Josantonius).

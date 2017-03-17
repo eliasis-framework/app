@@ -9,24 +9,14 @@
  * @since      1.0.0
  */
 
-namespace App\Modules\ForkMeGitHub;
+use Eliasis\Module\Module;
 
-use Eliasis\Route\Route,
-    Eliasis\Module\Module;
+$controller = Module::getNamespace('controller');
 
-/**
- * Routes handler.
- *
- * @since 1.0.0
- */
-class Routes {
+return [
 
-    /**
-     * Add routes to the application.
-     *
-     * @param array $routes
-     *
-     * @since 1.0.0
-     */
-    public static function add() { }
-}
+    'routes' => [
+
+        'example' => $controller . 'ForkMeGitHub' . '@example',
+    ],
+];

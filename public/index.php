@@ -11,7 +11,7 @@
 
 $DS = DIRECTORY_SEPARATOR;
 
-$loader = require dirname(__DIR__).$DS.'lib'.$DS.'vendor'.$DS.'autoload.php';
+require dirname(__DIR__) . $DS . 'lib' . $DS . 'vendor' . $DS .'autoload.php';
 
 use Eliasis\App\App,
     Josantonius\LoadTime\LoadTime;

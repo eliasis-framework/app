@@ -11,8 +11,8 @@
 - [Installation](#installation)
 - [Requirements](#requirements)
 - [Contribute](#contribute)
-- [Author](#author)
 - [Licensing](#licensing)
+- [Copyright](#copyright)
 
 ---
 
@@ -37,10 +37,12 @@ This framework is supported by PHP versions 5.6 or higher and is compatible with
 
 This is intended for large and long-lived objects.
 
-### Author
-
-Maintained by [Josantonius](https://github.com/Josantonius/).
-
 ### Licensing
 
 This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
+
+## Copyright
+
+2017 Josantonius, [josantonius.com](https://josantonius.com/)
+
+If you found this release useful please let the author know! Follow on [Twitter](https://twitter.com/Josantonius).

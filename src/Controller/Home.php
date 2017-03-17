@@ -12,7 +12,7 @@
 namespace App\Controller;
 
 use Eliasis\App\App,
-	Eliasis\Hook\Hook,
+	Josantonius\Hook\Hook,
 	Eliasis\Controller\Controller,
     Josantonius\Asset\Asset;
 
@@ -43,8 +43,6 @@ class Home extends Controller {
 		Hook::addHook([
 			'css'       => App::namespace('controller') . 'Home@css',
 			'js'        => App::namespace('controller') . 'Home@js',
-		   #'afterBody' => App::namespace('controller') . 'Home@afterBody'),
-		   #'footer'    => App::namespace('controllers) . 'Home@after'),
 		]);
 	}
 

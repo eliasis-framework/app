@@ -9,8 +9,8 @@
  * @since      1.0.0
  */
 
-use Eliasis\Hook\Hook;
-use Eliasis\App\App;
+use Eliasis\App\App,
+	Josantonius\Hook\Hook;
 
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ use Eliasis\App\App;
     <?php require(App::path('elements') . 'header.php'); ?>
     
     <body>
-        <?php Hook::run('afterBody');?>
+        <?php Hook::run('after-body');?>
         <?php require(App::path('pages') . 'home.php'); ?>
 
     </body>

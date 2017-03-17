@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.0.0 - 2017-03-17
+
+* Added `Josantonius/Hook` library.
+* Added `Josantonius/Router` library.
+* Added `Josantonius/Cleaner` library.
+* Added `Josantonius/Asset` library.
+* Added `Josantonius/ErrorHandler` library.
+
 ## 1.0.0 - 2017-03-05
 
 * Added `App\Controller\Home` class.
@@ -31,4 +39,3 @@
 
 * Added `eliasis-framework/eliasis` framework.
 * Added `Josantonius/LoadTime` library.
-
