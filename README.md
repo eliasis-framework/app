@@ -24,6 +24,14 @@ You can install this application using [Composer](http://getcomposer.org/downloa
 
     $ composer create-project --prefer-dist eliasis-framework/app
 
+The previous command will only install the necessary files, if you prefer to download the entire source, including tests, you can use:
+
+    $ composer create-project --prefer-source eliasis-framework/app
+
+Or you can also clone the complete repository with Git:
+
+	$ git clone https://github.com/Eliasis-Framework/App.git
+
 ### Requirements
 
 This framework is supported by PHP versions 5.6 or higher and is compatible with HHVM versions 3.0 or higher.
@@ -41,8 +49,10 @@ This is intended for large and long-lived objects.
 
 This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
 
-## Copyright
+### Copyright
 
 2017 Josantonius, [josantonius.com](https://josantonius.com/)
 
-If you found this release useful please let the author know! Follow on [Twitter](https://twitter.com/Josantonius).
+If you find it useful, let me know :wink:
+
+You can contact me on [Twitter](https://twitter.com/Josantonius) or through my [email](mailto:hello@josantonius.com).
