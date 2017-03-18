@@ -10,7 +10,8 @@
         "PHP"
     ],
     "config": {
-        "vendor-dir": "lib/vendor"
+        "vendor-dir": "lib/vendor",
+        "preferred-install": "dist"
     },
     "license": "MIT",
     "authors": [
@@ -21,10 +22,7 @@
             "role":     "Developer"
         }
     ],
-    "config": {
-        "preferred-install": "dist"
-    },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "support": {
         "issues": "https://github.com/eliasis-framework/app/issues",
         "forum": "http://stackoverflow.com/tags/eliasis",
