@@ -22,7 +22,7 @@
             "role":     "Developer"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "support": {
         "issues": "https://github.com/eliasis-framework/app/issues",
         "forum": "http://stackoverflow.com/tags/eliasis",
