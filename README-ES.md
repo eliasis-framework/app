@@ -23,7 +23,7 @@ Puedes instalar esta aplicación utilizando [Composer](http://getcomposer.org/do
 
     $ composer create-project --prefer-dist eliasis-framework/app
 
-El comando anterior solamente instalará los archivos necesarios, si prefieres descargar todo el código, incluyendo tests, puedes utilizar:
+El comando anterior sólo instalará los archivos necesarios, si prefieres descargar todo el código fuente (incluyendo tests, directorio vendor, excepciones no utilizadas, documentos...) puedes utilizar:
 
     $ composer create-project --prefer-source eliasis-framework/app
 
