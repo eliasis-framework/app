@@ -15,21 +15,23 @@
     "authors": [
         {
             "name":     "Josantonius",
-            "email":    "hola@josantonius.com",
-            "homepage": "https://github.com/josantonius",
+            "email":    "hello@josantonius.com",
+            "homepage": "https://josantonius.com",
             "role":     "Developer"
         }
     ],
+    "config": {
+        "preferred-install": "dist"
+    },
     "minimum-stability": "dev",
-    "prefer-stable" : true,
     "support": {
         "issues": "https://github.com/Eliasis-Framework/fork-me-github/issues",
         "forum": "http://stackoverflow.com/tags/eliasis",
         "source": "https://github.com/Eliasis-Framework/fork-me-github"
     },
     "require": {
-        "composer/installers": "*",
-        "Josantonius/Asset": "*"
+        "composer/installers": "dev-master",
+        "Josantonius/Asset" : "^1.1.1"
     },
     "autoload": {
         "psr-4": {

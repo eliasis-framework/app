@@ -39,19 +39,19 @@ class App {
      */
     public function __construct($baseDirectory) {
 
-        $this->runErrorHandler();
+        $this->_runErrorHandler();
 
-        $this->runCleaner();
+        $this->_runCleaner();
 
         $this->_setConstants($baseDirectory);
 
         $this->_getSettings();
 
-        $this->runHooks();
+        $this->_runHooks();
 
-        $this->runModules();
+        $this->_runModules();
 
-        $this->runRoutes();
+        $this->_runRoutes();
     }
 
     /**
@@ -59,7 +59,7 @@ class App {
      *
      * @since 1.0.1
      */
-    private static function runErrorHandler() {
+    private static function _runErrorHandler() {
 
         if (class_exists($class = 'Josantonius\ErrorHandler\ErrorHandler')) {
 
@@ -72,7 +72,7 @@ class App {
      *
      * @since 1.0.1
      */
-    private static function runCleaner() {
+    private static function _runCleaner() {
 
         if (class_exists($Cleaner = 'Josantonius\Cleaner\Cleaner')) {
 
@@ -134,7 +134,7 @@ class App {
      *
      * @since 1.0.1
      */
-    private static function runHooks() {
+    private static function _runHooks() {
 
         if (class_exists($Hook = 'Josantonius\Hook\Hook')) {
 
@@ -149,14 +149,11 @@ class App {
      *
      * @since 1.0.1
      */
-    private static function runModules() {
+    private static function _runModules() {
 
-        if (is_dir(App::path('modules'))) {
+        $Module = 'Eliasis\Module\Module';
 
-            $Module = 'Eliasis\Module\Module';
-
-            $Module::loadModules(App::path('modules'));
-        }
+        $Module::loadModules(App::path('modules'));
     }
 
     /**
@@ -164,7 +161,7 @@ class App {
      *
      * @since 1.0.1
      */
-    private static function runRoutes() {
+    private static function _runRoutes() {
 
         if (class_exists($Router = 'Josantonius\Router\Router')) {
 

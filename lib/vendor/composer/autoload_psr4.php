@@ -14,7 +14,7 @@ return array(
     'Josantonius\\Cleaner\\' => array($vendorDir . '/josantonius/cleaner/src'),
     'Josantonius\\Asset\\' => array($vendorDir . '/josantonius/asset/src'),
     'Eliasis\\' => array($vendorDir . '/eliasis-framework/eliasis/src'),
-    'Composer\\Installers\\' => array($vendorDir . '/eliasis-framework/installers/src/Composer/Installers'),
+    'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
     'App\\Modules\\ForkMeGitHub\\' => array($baseDir . '/modules/fork-me-github/src'),
     'App\\' => array($baseDir . '/src'),
 );

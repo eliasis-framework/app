@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit58e427f888a529ad35832581ca64b45f
+class ComposerStaticInitffea14f3e4ed9d16cc56b9e7902c913e
 {
     public static $prefixLengthsPsr4 = array (
         'J' => 
@@ -67,7 +67,7 @@ class ComposerStaticInit58e427f888a529ad35832581ca64b45f
         ),
         'Composer\\Installers\\' => 
         array (
-            0 => __DIR__ . '/..' . '/eliasis-framework/installers/src/Composer/Installers',
+            0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),
         'App\\Modules\\ForkMeGitHub\\' => 
         array (
@@ -82,8 +82,8 @@ class ComposerStaticInit58e427f888a529ad35832581ca64b45f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit58e427f888a529ad35832581ca64b45f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit58e427f888a529ad35832581ca64b45f::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitffea14f3e4ed9d16cc56b9e7902c913e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitffea14f3e4ed9d16cc56b9e7902c913e::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
