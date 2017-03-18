@@ -30,7 +30,7 @@
         "source": "https://github.com/Eliasis-Framework/fork-me-github"
     },
     "require": {
-        "composer/installers": "dev-master",
+        "composer/installers": "master",
         "Josantonius/Asset" : "^1.1.1"
     },
     "autoload": {

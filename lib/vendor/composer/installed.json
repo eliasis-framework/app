@@ -122,18 +122,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/PHP-Asset.git",
-            "reference": "862a95ef1446a758ddb74d359172d1a4eef253a0"
+            "reference": "37313d9dbde38c37c750fbd5cc028578eb72d4b7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-Asset/zipball/862a95ef1446a758ddb74d359172d1a4eef253a0",
-            "reference": "862a95ef1446a758ddb74d359172d1a4eef253a0",
+            "url": "https://api.github.com/repos/Josantonius/PHP-Asset/zipball/37313d9dbde38c37c750fbd5cc028578eb72d4b7",
+            "reference": "37313d9dbde38c37c750fbd5cc028578eb72d4b7",
             "shasum": ""
         },
         "require": {
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-18 05:24:41",
+        "time": "2017-03-18 17:11:36",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -175,19 +175,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Eliasis-Framework/fork-me-github.git",
-            "reference": "d44a8653ea1d785f277dd6c74da0c1463d65d676"
+            "reference": "f64f921e4308e39abe49707a16b9151b988a518e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Eliasis-Framework/fork-me-github/zipball/d44a8653ea1d785f277dd6c74da0c1463d65d676",
-            "reference": "d44a8653ea1d785f277dd6c74da0c1463d65d676",
+            "url": "https://api.github.com/repos/Eliasis-Framework/fork-me-github/zipball/f64f921e4308e39abe49707a16b9151b988a518e",
+            "reference": "f64f921e4308e39abe49707a16b9151b988a518e",
             "shasum": ""
         },
         "require": {
-            "composer/installers": "dev-master",
+            "composer/installers": "master",
             "josantonius/asset": "^1.1.1"
         },
-        "time": "2017-03-18 06:20:07",
+        "time": "2017-03-18 19:22:51",
         "type": "eliasis-module",
         "installation-source": "dist",
         "autoload": {
@@ -224,18 +224,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/PHP-LoadTime.git",
-            "reference": "f36d648df386c5da858dfb1d8807d39953560e6a"
+            "reference": "9c5fd4b3c8b7caa1a3c860dc351dbb7ecbac410d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-LoadTime/zipball/f36d648df386c5da858dfb1d8807d39953560e6a",
-            "reference": "f36d648df386c5da858dfb1d8807d39953560e6a",
+            "url": "https://api.github.com/repos/Josantonius/PHP-LoadTime/zipball/9c5fd4b3c8b7caa1a3c860dc351dbb7ecbac410d",
+            "reference": "9c5fd4b3c8b7caa1a3c860dc351dbb7ecbac410d",
             "shasum": ""
         },
         "require": {
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-18 05:31:42",
+        "time": "2017-03-18 17:15:03",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -275,18 +275,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/PHP-Cleaner.git",
-            "reference": "8055f8785119cb5116ccb7b24658b3461a79600c"
+            "reference": "4d24ebe918fd008fd7f8d2a9a2f3ed3cd9d005e8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-Cleaner/zipball/8055f8785119cb5116ccb7b24658b3461a79600c",
-            "reference": "8055f8785119cb5116ccb7b24658b3461a79600c",
+            "url": "https://api.github.com/repos/Josantonius/PHP-Cleaner/zipball/4d24ebe918fd008fd7f8d2a9a2f3ed3cd9d005e8",
+            "reference": "4d24ebe918fd008fd7f8d2a9a2f3ed3cd9d005e8",
             "shasum": ""
         },
         "require": {
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-18 05:26:23",
+        "time": "2017-03-18 17:12:10",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -327,18 +327,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/PHP-ErrorHandler.git",
-            "reference": "803559056f868560dac56568b8453ea5ccaadf88"
+            "reference": "4ab4eec0f5e798723d506b8269e0cfb51a4030de"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-ErrorHandler/zipball/803559056f868560dac56568b8453ea5ccaadf88",
-            "reference": "803559056f868560dac56568b8453ea5ccaadf88",
+            "url": "https://api.github.com/repos/Josantonius/PHP-ErrorHandler/zipball/4ab4eec0f5e798723d506b8269e0cfb51a4030de",
+            "reference": "4ab4eec0f5e798723d506b8269e0cfb51a4030de",
             "shasum": ""
         },
         "require": {
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-18 05:28:38",
+        "time": "2017-03-18 17:13:22",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -382,18 +382,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/PHP-Url.git",
-            "reference": "500c564e8bd01347ae3cfc2d665a0baf21dc3052"
+            "reference": "a2f83106d22078195781dc347456691cfc3edeca"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-Url/zipball/500c564e8bd01347ae3cfc2d665a0baf21dc3052",
-            "reference": "500c564e8bd01347ae3cfc2d665a0baf21dc3052",
+            "url": "https://api.github.com/repos/Josantonius/PHP-Url/zipball/a2f83106d22078195781dc347456691cfc3edeca",
+            "reference": "a2f83106d22078195781dc347456691cfc3edeca",
             "shasum": ""
         },
         "require": {
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-18 05:22:45",
+        "time": "2017-03-18 17:16:52",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -435,19 +435,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Eliasis-Framework/Eliasis.git",
-            "reference": "2d1bddf673e484b9d7990d9c7ce1109c740904ad"
+            "reference": "4c9cb76d5af38e433ac2651fc76f36faab7ae9f4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/2d1bddf673e484b9d7990d9c7ce1109c740904ad",
-            "reference": "2d1bddf673e484b9d7990d9c7ce1109c740904ad",
+            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/4c9cb76d5af38e433ac2651fc76f36faab7ae9f4",
+            "reference": "4c9cb76d5af38e433ac2651fc76f36faab7ae9f4",
             "shasum": ""
         },
         "require": {
             "josantonius/url": "^1.1.1",
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-18 06:11:00",
+        "time": "2017-03-18 19:24:28",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -487,18 +487,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/PHP-Hook.git",
-            "reference": "c55afb21b3f1469b23881afed68c93e1a531962c"
+            "reference": "c218003824ff68a3b1de5f67cffeea1a7b8c73a5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-Hook/zipball/c55afb21b3f1469b23881afed68c93e1a531962c",
-            "reference": "c55afb21b3f1469b23881afed68c93e1a531962c",
+            "url": "https://api.github.com/repos/Josantonius/PHP-Hook/zipball/c218003824ff68a3b1de5f67cffeea1a7b8c73a5",
+            "reference": "c218003824ff68a3b1de5f67cffeea1a7b8c73a5",
             "shasum": ""
         },
         "require": {
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-18 05:29:45",
+        "time": "2017-03-18 17:14:14",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -536,19 +536,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/PHP-Router.git",
-            "reference": "208af41ccb02bfea8053e67067b43d2e63b8dd93"
+            "reference": "fea79164354165e9f513ec3f3b799eced0e01fb2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-Router/zipball/208af41ccb02bfea8053e67067b43d2e63b8dd93",
-            "reference": "208af41ccb02bfea8053e67067b43d2e63b8dd93",
+            "url": "https://api.github.com/repos/Josantonius/PHP-Router/zipball/fea79164354165e9f513ec3f3b799eced0e01fb2",
+            "reference": "fea79164354165e9f513ec3f3b799eced0e01fb2",
             "shasum": ""
         },
         "require": {
             "josantonius/url": "^1.1.1",
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-18 05:02:34",
+        "time": "2017-03-18 17:16:23",
         "type": "library",
         "extra": {
             "branch-alias": {
