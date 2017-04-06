@@ -34,9 +34,9 @@
         "eliasis-framework/fork-me-github" : "^1.0.1",
         "Josantonius/LoadTime"             : "^1.1.1",
         "Josantonius/Hook"                 : "^1.0.1",
-        "Josantonius/Router"               : "^1.0.1",
+        "Josantonius/Router"               : "^1.0.2",
         "Josantonius/Cleaner"              : "^1.1.1",
-        "Josantonius/Asset"                : "^1.1.1",
+        "Josantonius/Asset"                : "^1.1.2",
         "Josantonius/ErrorHandler"         : "^1.1.2"
     },
     "autoload": {
