@@ -21,6 +21,15 @@ use Josantonius\Url\Url;
 class App {
 
     /**
+     * App instance.
+     *
+     * @since 1.0.2
+     *
+     * @var object
+     */
+    protected static $instance;
+
+    /**
      * Unique id for the application.
      *
      * @since 1.0.0
@@ -48,33 +57,49 @@ class App {
     const DS = DIRECTORY_SEPARATOR;
 
     /**
+     * Get controller instance.
+     *
+     * @since 1.0.2
+     *
+     * @return object → controller instance
+     */
+    public static function getInstance() {
+
+        NULL === self::$instance and self::$instance = new self;
+
+        return static::$instance;
+    }
+
+    /**
      * Initializer.
+     *
+     * @since 1.0.2
      *
      * @param string $baseDirectory → directory where class is instantiated
      * @param string $type          → application type
      * @param string $id            → unique id for the application
-     *
-     * @since 1.0.0
      */
-    public function __construct($baseDirectory, $type = 'app', $id = '0') {
+    public static function run($baseDirectory, $type = 'app', $id = '0') {
 
         self::$id = $id;
 
-        $this->_setPaths($baseDirectory);
+        $instance = self::getInstance();
 
-        $this->_setUrls($baseDirectory, $type);
+        $instance->_setPaths($baseDirectory);
 
-        $this->_runErrorHandler();
+        $instance->_setUrls($baseDirectory, $type);
 
-        $this->_runCleaner();
+        $instance->_runErrorHandler();
 
-        $this->_getSettings();
+        $instance->_runCleaner();
 
-        $this->_runHooks();
+        $instance->_getSettings();
 
-        $this->_runModules();
+        $instance->_runHooks();
 
-        $this->_runRoutes();
+        $instance->_runModules();
+
+        $instance->_runRoutes();
     }
 
     /**
@@ -107,9 +132,9 @@ class App {
     /**
      * Set application paths.
      *
-     * @param string $baseDirectory → directory where class is instantiated
-     *
      * @since 1.0.1
+     *
+     * @param string $baseDirectory → directory where class is instantiated
      */
     private function _setPaths($baseDirectory) {
 
@@ -122,10 +147,10 @@ class App {
     /**
      * Set url depending where the framework is launched.
      *
+     * @since 1.0.1
+     *
      * @param string $baseDirectory → directory where class is instantiated
      * @param string $type          → application type
-     *
-     * @since 1.0.1
      */
     private function _setUrls($baseDirectory, $type) {
 
@@ -229,6 +254,8 @@ class App {
     /**
      * Define new configuration settings.
      *
+     * @since 1.0.0
+     *
      * @param string $option → option name or options array
      * @param mixed  $value  → value/s
      *
@@ -252,7 +279,23 @@ class App {
     }
 
     /**
+     * Define the application id.
+     *
+     * @since 1.0.1
+     *
+     * @param string $id → application id
+     *
+     * @return
+     */
+    public static function id($id) {
+
+        self::$id = $id;
+    }
+
+    /**
      * Access the configuration parameters.
+     *
+     * @since 1.0.0
      *
      * @param string $index
      * @param array  $params
