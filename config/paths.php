@@ -9,14 +9,19 @@
  * @since      1.0.0
  */
 
+use Eliasis\App\App;
+
+$DS   = App::DS;
+$ROOT = dirname(__DIR__) . $DS;
+
 return [
 
     'path' => [
 
-        'modules'  => ROOT . 'modules' .DS,
-        'public'   => ROOT . 'public'  .DS,
-        'layout'   => ROOT . 'src'     .DS. 'template' .DS. 'layout'   . DS,
-        'pages'    => ROOT . 'src'     .DS. 'template' .DS. 'pages'    . DS,
-        'elements' => ROOT . 'src'     .DS. 'template' .DS. 'elements' . DS,
+        'modules'  => $ROOT .'modules'.$DS,
+        'public'   => $ROOT .'public' .$DS,
+        'layout'   => $ROOT .'src'    .$DS.'template' . $DS . 'layout'   . $DS,
+        'pages'    => $ROOT .'src'    .$DS.'template' . $DS . 'pages'    . $DS,
+        'elements' => $ROOT .'src'    .$DS.'template' . $DS . 'elements' . $DS,
     ],
 ];

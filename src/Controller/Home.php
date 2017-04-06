@@ -41,8 +41,8 @@ class Home extends Controller {
 	public function setHooks() {
 
 		Hook::addHook([
-			'css'       => App::namespace('controller') . 'Home@css',
-			'js'        => App::namespace('controller') . 'Home@js',
+			'css'       => App::getNamespace('controller') . 'Home@css',
+			'js'        => App::getNamespace('controller') . 'Home@js',
 		]);
 	}
 
@@ -53,7 +53,7 @@ class Home extends Controller {
      */
 	public function css() {
 
-        Asset::css(PUBLIC_URL . 'css' . DS . 'style.css');
+        Asset::css(App::PUBLIC_URL() . 'css' . App::DS . 'style.css');
 	}
 	
     /**
@@ -84,6 +84,6 @@ class Home extends Controller {
      */
 	public function render() {
 
-        self::$view->renderizate(App::path('layout') . 'default');
+        $this->view->renderizate(App::path('layout') . 'default');
 	}
 }

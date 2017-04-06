@@ -9,7 +9,9 @@
  * @since      1.0.0
  */
 
-$versionFile = file(CORE . 'VERSION.txt');
+use Eliasis\App\App;
+
+$versionFile = file(dirname(__DIR__) . App::DS . 'VERSION.txt');
 
 return [
 

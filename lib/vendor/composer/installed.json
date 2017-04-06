@@ -175,12 +175,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Eliasis-Framework/fork-me-github.git",
-            "reference": "f64f921e4308e39abe49707a16b9151b988a518e"
+            "reference": "ab3fee5b479399affe24ba885e32fba854d2f264"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Eliasis-Framework/fork-me-github/zipball/f64f921e4308e39abe49707a16b9151b988a518e",
-            "reference": "f64f921e4308e39abe49707a16b9151b988a518e",
+            "url": "https://api.github.com/repos/Eliasis-Framework/fork-me-github/zipball/ab3fee5b479399affe24ba885e32fba854d2f264",
+            "reference": "ab3fee5b479399affe24ba885e32fba854d2f264",
             "shasum": ""
         },
         "require": {
@@ -327,12 +327,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/PHP-ErrorHandler.git",
-            "reference": "4ab4eec0f5e798723d506b8269e0cfb51a4030de"
+            "reference": "58ddcbe58aea290ec35f50e09e1cd94f9b14c34e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-ErrorHandler/zipball/4ab4eec0f5e798723d506b8269e0cfb51a4030de",
-            "reference": "4ab4eec0f5e798723d506b8269e0cfb51a4030de",
+            "url": "https://api.github.com/repos/Josantonius/PHP-ErrorHandler/zipball/58ddcbe58aea290ec35f50e09e1cd94f9b14c34e",
+            "reference": "58ddcbe58aea290ec35f50e09e1cd94f9b14c34e",
             "shasum": ""
         },
         "require": {
@@ -435,26 +435,26 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Eliasis-Framework/Eliasis.git",
-            "reference": "4c9cb76d5af38e433ac2651fc76f36faab7ae9f4"
+            "reference": "d5070a0790f2e466e6699a36293477e4cd4b7205"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/4c9cb76d5af38e433ac2651fc76f36faab7ae9f4",
-            "reference": "4c9cb76d5af38e433ac2651fc76f36faab7ae9f4",
+            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/d5070a0790f2e466e6699a36293477e4cd4b7205",
+            "reference": "d5070a0790f2e466e6699a36293477e4cd4b7205",
             "shasum": ""
         },
         "require": {
             "josantonius/url": "^1.1.1",
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-18 19:24:28",
+        "time": "2017-04-06 16:24:59",
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-master": "1.0-dev"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-4": {
                 "Eliasis\\": "src/"
@@ -487,25 +487,25 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/PHP-Hook.git",
-            "reference": "c218003824ff68a3b1de5f67cffeea1a7b8c73a5"
+            "reference": "9b4fcc1062b92141c4151fd397311d8446e29a34"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-Hook/zipball/c218003824ff68a3b1de5f67cffeea1a7b8c73a5",
-            "reference": "c218003824ff68a3b1de5f67cffeea1a7b8c73a5",
+            "url": "https://api.github.com/repos/Josantonius/PHP-Hook/zipball/9b4fcc1062b92141c4151fd397311d8446e29a34",
+            "reference": "9b4fcc1062b92141c4151fd397311d8446e29a34",
             "shasum": ""
         },
         "require": {
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-18 17:14:14",
+        "time": "2017-03-20 07:37:59",
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-master": "1.0-dev"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-4": {
                 "Josantonius\\Hook\\": "src/"

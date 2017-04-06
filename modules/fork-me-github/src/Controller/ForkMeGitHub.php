@@ -41,6 +41,6 @@ class ForkMeGitHub extends Controller {
 
         $path = Module::ForkMeGitHub('getPath', 'view');
 
-        self::$view->renderizate($path . 'strip');
+        $this->view->renderizate($path . 'strip');
     }
 }

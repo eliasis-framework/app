@@ -18,4 +18,4 @@ use Eliasis\Model\Model;
  *
  * @since 1.0.0
  */
-class Blog extends Model { }
+class ForkMeGitHub extends Model { }

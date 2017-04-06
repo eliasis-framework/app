@@ -11,8 +11,7 @@
                                                                                      
 namespace Eliasis\App;
 
-use Eliasis\App\Exception\AppException,
-    Josantonius\Url\Url;
+use Josantonius\Url\Url;
 
 /**
  * Eliasis main class.
@@ -20,6 +19,15 @@ use Eliasis\App\Exception\AppException,
  * @since 1.0.0
  */
 class App {
+
+    /**
+     * Unique id for the application.
+     *
+     * @since 1.0.0
+     *
+     * @var object
+     */
+    public static $id;
 
     /**
      * Framework settings.
@@ -31,19 +39,34 @@ class App {
     protected static $settings = [];
 
     /**
+     * Set directory separator constant.
+     *
+     * @since 1.0.1
+     *
+     * @var string
+     */
+    const DS = DIRECTORY_SEPARATOR;
+
+    /**
      * Initializer.
      *
-     * @param string $baseDirectory → directory where class is instantiated.
+     * @param string $baseDirectory → directory where class is instantiated
+     * @param string $type          → application type
+     * @param string $id            → unique id for the application
      *
      * @since 1.0.0
      */
-    public function __construct($baseDirectory) {
+    public function __construct($baseDirectory, $type = 'app', $id = '0') {
+
+        self::$id = $id;
+
+        $this->_setPaths($baseDirectory);
+
+        $this->_setUrls($baseDirectory, $type);
 
         $this->_runErrorHandler();
 
         $this->_runCleaner();
-
-        $this->_setConstants($baseDirectory);
 
         $this->_getSettings();
 
@@ -59,9 +82,9 @@ class App {
      *
      * @since 1.0.1
      */
-    private static function _runErrorHandler() {
+    private function _runErrorHandler() {
 
-        if (class_exists($class = 'Josantonius\ErrorHandler\ErrorHandler')) {
+        if (class_exists($class='Josantonius\\ErrorHandler\\ErrorHandler')) {
 
             new $class;
         }
@@ -72,9 +95,9 @@ class App {
      *
      * @since 1.0.1
      */
-    private static function _runCleaner() {
+    private function _runCleaner() {
 
-        if (class_exists($Cleaner = 'Josantonius\Cleaner\Cleaner')) {
+        if (class_exists($Cleaner = 'Josantonius\\Cleaner\\Cleaner')) {
 
             $Cleaner::removeMagicQuotes();
             $Cleaner::unregisterGlobals();
@@ -82,20 +105,43 @@ class App {
     }
 
     /**
-     * Add global constants for the application.
+     * Set application paths.
      *
-     * @param string $baseDirectory → directory where class is instantiated.
+     * @param string $baseDirectory → directory where class is instantiated
      *
-     * @since 1.0.0
+     * @since 1.0.1
      */
-    private function _setConstants($baseDirectory) {
+    private function _setPaths($baseDirectory) {
 
-        define('BS', '\\');
-        define('DS', DIRECTORY_SEPARATOR);
-        define("ROOT", $baseDirectory . DS);
-        define("CORE", dirname(dirname(__DIR__)) . DS);
-        define("MODULES_URL", Url::getBaseUrl()  . 'modules' . DS);
-        define("PUBLIC_URL",  Url::getBaseUrl()  . 'public'  . DS);
+        $baseUrl = Url::getBaseUrl();
+
+        self::addOption("ROOT", $baseDirectory . App::DS);
+        self::addOption("CORE", dirname(dirname(__DIR__)) . App::DS);
+    }
+
+    /**
+     * Set url depending where the framework is launched.
+     *
+     * @param string $baseDirectory → directory where class is instantiated
+     * @param string $type          → application type
+     *
+     * @since 1.0.1
+     */
+    private function _setUrls($baseDirectory, $type) {
+
+        switch ($type) {
+
+            case 'wordpress-plugin':
+                $baseUrl = plugins_url(basename($baseDirectory)) . App::DS;
+                break;
+            
+            default:
+                $baseUrl = Url::getBaseUrl();
+                break;
+        }
+
+        self::addOption("MODULES_URL", $baseUrl . 'modules' . App::DS);
+        self::addOption("PUBLIC_URL",  $baseUrl . 'public'  . App::DS);
     }
 
     /**
@@ -107,9 +153,11 @@ class App {
 
         $path = [
 
-            CORE . 'config' . DS,
-            ROOT . 'config' . DS,
+            App::CORE() . 'config' . App::DS,
+            App::ROOT() . 'config' . App::DS,
         ];
+
+        $id = self::$id;
 
         foreach ($path as $dir) {
 
@@ -121,12 +169,14 @@ class App {
 
                     $config = require($dir . $file);
 
-                    self::$settings = array_merge(self::$settings, $config);
-                }
+                    self::$settings[$id] = array_merge(
 
-                unset($config);
+                        self::$settings[$id], 
+                        $config
+                    );
+                }
             }
-        }
+        }         
     }
 
     /**
@@ -134,13 +184,11 @@ class App {
      *
      * @since 1.0.1
      */
-    private static function _runHooks() {
+    private function _runHooks() {
 
-        if (class_exists($Hook = 'Josantonius\Hook\Hook')) {
+        if (class_exists($Hook = 'Josantonius\\Hook\\Hook')) {
 
-            $hooks = $Hook::getInstance();
-
-            $hooks->run('routes');
+            $Hook::getInstance();
         }
     }
 
@@ -149,11 +197,11 @@ class App {
      *
      * @since 1.0.1
      */
-    private static function _runModules() {
+    private function _runModules() {
 
-        $Module = 'Eliasis\Module\Module';
+        $Module = 'Eliasis\\Module\\Module';
 
-        $Module::loadModules(App::path('modules'));
+        $Module::loadModules(self::path('modules'));
     }
 
     /**
@@ -161,15 +209,17 @@ class App {
      *
      * @since 1.0.1
      */
-    private static function _runRoutes() {
+    private function _runRoutes() {
 
-        if (class_exists($Router = 'Josantonius\Router\Router')) {
+        $id = self::$id;
 
-            if (isset(self::$settings['routes'])) {
+        if (class_exists($Router = 'Josantonius\\Router\\Router')) {
 
-                $Router::addRoute(self::$settings['routes']);
+            if (isset(self::$settings[$id]['routes'])) {
 
-                unset(self::$settings['routes']);
+                $Router::addRoute(self::$settings[$id]['routes']);
+
+                unset(self::$settings[$id]['routes']);
 
                 $Router::dispatch();
             }
@@ -179,12 +229,26 @@ class App {
     /**
      * Define new configuration settings.
      *
-     * @param string $name
-     * @param mixed  $value
+     * @param string $option → option name or options array
+     * @param mixed  $value  → value/s
+     *
+     * @return
      */
-    public static function addOption($name, $value) {
+    public static function addOption($option, $value) {
 
-        self::$settings[$name] = $value;
+        $id = self::$id;
+
+        if (is_array($value)) {
+
+            foreach ($value as $key => $value) {
+            
+                self::$settings[$id][$option][$key] = $value;
+            }
+
+            return;
+        }
+
+        self::$settings[$id][$option] = $value;
     }
 
     /**
@@ -193,23 +257,26 @@ class App {
      * @param string $index
      * @param array  $params
      *
-     * @throws AppException → No parameter was received
      * @return mixed
      */
-    public static function __callstatic($index, $params) {
+    public static function __callstatic($index, $params = []) {
 
-        switch (count($params)) {
-            case '1':
-                return self::$settings[$index][$params[0]];
-                break;
+        $id = self::$id;
 
-            case '2':
-                return self::$settings[$index][$params[0]][$params[1]];
-                break;
+        $settings = self::$settings[$id];
 
-            default:
-                throw new AppException('No parameter was received', 800);
-                break;
+        $column[] = (isset($settings[$index])) ? $settings[$index] : null;
+
+        if (!count($params)) {
+
+            return (!is_null($column[0])) ? $column[0] : '';
         }
+
+        foreach ($params as $param) {
+            
+            $column = array_column($column, $param);
+        }
+        
+        return (isset($column[0])) ? $column[0] : '';
     }
 }

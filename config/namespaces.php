@@ -11,9 +11,9 @@
 
 return [
 
-    'namespace' => [
+    'getNamespace' => [
 
-        'controller' => 'App'  . BS . 'Controller' . BS,
-        'modules'    => 'App'  . BS . 'Modules'    . BS,
+        'controller' => 'App\\Controller\\',
+        'modules'    => 'App\\Modules\\',
     ],
 ];
