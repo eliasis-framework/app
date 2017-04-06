@@ -18,7 +18,7 @@ use Eliasis\App\App,
 
 LoadTime::start();
 
-new App(dirname(__DIR__));
+App::run(dirname(__DIR__));
 
 /**
  * Show runtime.
