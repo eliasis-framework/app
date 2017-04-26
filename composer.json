@@ -1,6 +1,6 @@
 {
     "name":        "eliasis-framework/app",
-    "version":     "1.0.1",
+    "version":     "1.0.2",
     "description": "Basic app for Eliasis PHP Framework",
     "type": "project",
     "keywords": [
@@ -30,8 +30,8 @@
     },
     "require": {
         "php": "^5.6 || ^7.0",
-        "eliasis-framework/eliasis"        : "^1.0.2",
-        "eliasis-framework/fork-me-github" : "^1.0.1",
+        "eliasis-framework/eliasis"        : "^1.0.4",
+        "eliasis-framework/fork-me-github" : "^1.0.2",
         "Josantonius/LoadTime"             : "^1.1.1",
         "Josantonius/Hook"                 : "^1.0.1",
         "Josantonius/Router"               : "^1.0.2",
