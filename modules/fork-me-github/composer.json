@@ -1,6 +1,6 @@
 {
     "name":        "eliasis-framework/fork-me-github",
-    "version":     "1.0.1",
+    "version":     "1.0.2",
     "description": "Eliasis PHP Framework module: Show strip 'Fork me on GitHub' on top-right of the page",
     "type": "eliasis-module",
     "keywords": [
@@ -31,7 +31,7 @@
     },
     "require": {
         "composer/installers": "master",
-        "Josantonius/Asset" : "^1.1.1"
+        "Josantonius/Asset" : "^1.1.2"
     },
     "autoload": {
         "psr-4": {

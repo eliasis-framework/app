@@ -9,14 +9,16 @@
  * @since      1.0.0
  */
 
-use Eliasis\Module\Module;
+use Eliasis\App\App;
 
-$controller = Module::getNamespace('controller');
+$namespace = App::getNamespace('modules');
+
+$module = 'ForkMeGitHub';
 
 return [
 
-    'routes' => [
+    'namespace' => [
 
-        'example' => $controller . 'ForkMeGitHub' . '@example',
+        'controller' => $namespace . $module . '\\Controller\\',
     ],
 ];

@@ -53,55 +53,6 @@
         ]
     },
     {
-        "name": "eliasis-framework/fork-me-github",
-        "version": "1.0.1",
-        "version_normalized": "1.0.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Eliasis-Framework/fork-me-github.git",
-            "reference": "ab3fee5b479399affe24ba885e32fba854d2f264"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Eliasis-Framework/fork-me-github/zipball/ab3fee5b479399affe24ba885e32fba854d2f264",
-            "reference": "ab3fee5b479399affe24ba885e32fba854d2f264",
-            "shasum": ""
-        },
-        "require": {
-            "composer/installers": "master",
-            "josantonius/asset": "^1.1.1"
-        },
-        "time": "2017-03-18 19:22:51",
-        "type": "eliasis-module",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "App\\Modules\\ForkMeGitHub\\": "/src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Josantonius",
-                "email": "hello@josantonius.com",
-                "homepage": "https://josantonius.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Eliasis PHP Framework module: Show strip 'Fork me on GitHub' on top-right of the page",
-        "keywords": [
-            "Eliasis",
-            "Fork me on GitHub",
-            "framework",
-            "hmvc",
-            "php",
-            "strip"
-        ]
-    },
-    {
         "name": "josantonius/loadtime",
         "version": "1.1.1",
         "version_normalized": "1.1.1.0",
@@ -319,19 +270,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Eliasis-Framework/Eliasis.git",
-            "reference": "c14f939fb21d3ed23d4d203ffe1bdd3bd903d4a6"
+            "reference": "37f2bfa11e68a11f83895f3aa49e76c530c9613d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/c14f939fb21d3ed23d4d203ffe1bdd3bd903d4a6",
-            "reference": "c14f939fb21d3ed23d4d203ffe1bdd3bd903d4a6",
+            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/37f2bfa11e68a11f83895f3aa49e76c530c9613d",
+            "reference": "37f2bfa11e68a11f83895f3aa49e76c530c9613d",
             "shasum": ""
         },
         "require": {
             "josantonius/url": "^1.1.1",
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-04-26 17:39:35",
+        "time": "2017-04-29 21:06:11",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -578,6 +529,55 @@
             "yawik",
             "zend",
             "zikula"
+        ]
+    },
+    {
+        "name": "eliasis-framework/fork-me-github",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Eliasis-Framework/fork-me-github.git",
+            "reference": "7b1d535afc3039430fa5cd653e8f220baa6b3931"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Eliasis-Framework/fork-me-github/zipball/7b1d535afc3039430fa5cd653e8f220baa6b3931",
+            "reference": "7b1d535afc3039430fa5cd653e8f220baa6b3931",
+            "shasum": ""
+        },
+        "require": {
+            "composer/installers": "master",
+            "josantonius/asset": "^1.1.2"
+        },
+        "time": "2017-04-26 19:56:40",
+        "type": "eliasis-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "App\\Modules\\ForkMeGitHub\\": "/src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Josantonius",
+                "email": "hello@josantonius.com",
+                "homepage": "https://josantonius.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Eliasis PHP Framework module: Show strip 'Fork me on GitHub' on top-right of the page",
+        "keywords": [
+            "Eliasis",
+            "Fork me on GitHub",
+            "framework",
+            "hmvc",
+            "php",
+            "strip"
         ]
     }
 ]

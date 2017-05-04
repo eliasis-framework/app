@@ -29,7 +29,7 @@ class ForkMeGitHub extends Controller {
      */
     public function css() {
 
-        Asset::css(Module::ForkMeGitHub('getUrl', 'css') . 'style.css');
+        Asset::css(Module::ForkMeGitHub('url', 'css') . 'style.css');
     }
 
     /**
@@ -39,7 +39,7 @@ class ForkMeGitHub extends Controller {
      */
     public function render() {
 
-        $path = Module::ForkMeGitHub('getPath', 'view');
+        $path = Module::ForkMeGitHub('path', 'elements');
 
         $this->view->renderizate($path . 'strip');
     }

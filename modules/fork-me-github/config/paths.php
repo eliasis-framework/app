@@ -9,14 +9,16 @@
  * @since      1.0.0
  */
 
-use Eliasis\Module\Module;
+use Eliasis\App\App,
+	Eliasis\Module\Module;
 
-$controller = Module::getNamespace('controller');
+$DS   = App::DS;
+$ROOT = Module::ForkMeGitHub('path');
 
 return [
 
-    'hooks' => [
-        'css'        => $controller . 'ForkMeGitHub' . '@css',
-        'after-body' => $controller . 'ForkMeGitHub' . '@render',
+    'path' => [
+
+        'elements' => $ROOT .'src' . $DS .'template' . $DS . 'elements' . $DS,
     ],
 ];

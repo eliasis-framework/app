@@ -12,7 +12,7 @@
 return [
 
     'name'        => 'ForkMeGitHub',
-    'version'     => '1.0.0',
+    'version'     => '1.0.2',
     'description' => 'Add a strip "Fork me on GitHub" at the top of the page.',
     'uri'         => 'https://github.com/Eliasis-Framework/fork-me-github',
     'author'      => 'Josantonius',
