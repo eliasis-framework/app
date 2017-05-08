@@ -6,12 +6,12 @@
 #}
 #
 #location @rewrite {
-#   rewrite ^$   public/
+#   rewrite ^$   /
 #   rewrite (.*) public/$1
 #}
 
 <IfModule mod_rewrite.c>
     RewriteEngine on
-    RewriteRule    ^$   public/    [L]
+    RewriteRule    ^$   /    [L]
     RewriteRule    (.*) public/$1  [L]
 </IfModule>
