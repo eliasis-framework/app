@@ -1,6 +1,6 @@
 <?php
 /**
- * Eliasis PHP Framework
+ * Eliasis PHP Framework application
  *
  * @author     Josantonius - hello@josantonius.com
  * @copyright  Copyright (c) 2017
@@ -9,12 +9,7 @@
  * @since      1.0.0
  */
 
-use Eliasis\App\App;
-
-return [
-
-    'eliasis' => [
-
-        'version' => '1.1.0',
-    ],
-];
+use Josantonius\Hook\Hook;
+?>      
+    <?php Hook::doAction('js'); ?>
+    <?php Hook::doAction('footer'); ?>

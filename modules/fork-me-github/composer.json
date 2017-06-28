@@ -1,6 +1,6 @@
 {
     "name":        "eliasis-framework/fork-me-github",
-    "version":     "1.0.2",
+    "version":     "1.0.4",
     "description": "Eliasis PHP Framework module: Show strip 'Fork me on GitHub' on top-right of the page",
     "type": "eliasis-module",
     "keywords": [

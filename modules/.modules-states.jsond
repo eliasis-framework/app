@@ -1,0 +1,26 @@
+{
+    "ExtensionsForGrifus": {
+        "CustomImagesGrifus": {
+            "action": "",
+            "state": "active"
+        },
+        "CustomRatingGrifus": {
+            "action": "",
+            "state": "active"
+        },
+        "WP_Plugin_Info": {
+            "action": "",
+            "state": "active"
+        },
+        "CopyMovieGrifus": {
+            "action": "",
+            "state": "active"
+        }
+    },
+    "0": {
+        "ForkMeGitHub": {
+            "action": "",
+            "state": "active"
+        }
+    }
+}

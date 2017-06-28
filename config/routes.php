@@ -15,6 +15,6 @@ return [
 
     'routes' => [
 
-        '/' => App::getNamespace('controller') . 'Home@render'
+        '/' => App::get('namespaces', 'controller') . 'Home\Home@render'
     ],
 ];

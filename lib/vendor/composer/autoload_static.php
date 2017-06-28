@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit34cfb63b4c63b9f2d250ac4ff06c3791
+class ComposerStaticInitc5a5e349071b405ea0a86a5677c7200f
 {
     public static $prefixLengthsPsr4 = array (
         'J' => 
@@ -12,6 +12,7 @@ class ComposerStaticInit34cfb63b4c63b9f2d250ac4ff06c3791
             'Josantonius\\Url\\' => 16,
             'Josantonius\\Router\\' => 19,
             'Josantonius\\LoadTime\\' => 21,
+            'Josantonius\\Json\\' => 17,
             'Josantonius\\Hook\\' => 17,
             'Josantonius\\ErrorHandler\\' => 25,
             'Josantonius\\Cleaner\\' => 20,
@@ -19,6 +20,7 @@ class ComposerStaticInit34cfb63b4c63b9f2d250ac4ff06c3791
         ),
         'E' => 
         array (
+            'Eliasis\\Module\\' => 15,
             'Eliasis\\' => 8,
         ),
         'C' => 
@@ -45,6 +47,10 @@ class ComposerStaticInit34cfb63b4c63b9f2d250ac4ff06c3791
         array (
             0 => __DIR__ . '/..' . '/josantonius/loadtime/src',
         ),
+        'Josantonius\\Json\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/josantonius/json/src',
+        ),
         'Josantonius\\Hook\\' => 
         array (
             0 => __DIR__ . '/..' . '/josantonius/hook/src',
@@ -60,6 +66,10 @@ class ComposerStaticInit34cfb63b4c63b9f2d250ac4ff06c3791
         'Josantonius\\Asset\\' => 
         array (
             0 => __DIR__ . '/..' . '/josantonius/asset/src',
+        ),
+        'Eliasis\\Module\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/eliasis-framework/module/src',
         ),
         'Eliasis\\' => 
         array (
@@ -82,8 +92,8 @@ class ComposerStaticInit34cfb63b4c63b9f2d250ac4ff06c3791
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit34cfb63b4c63b9f2d250ac4ff06c3791::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit34cfb63b4c63b9f2d250ac4ff06c3791::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc5a5e349071b405ea0a86a5677c7200f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc5a5e349071b405ea0a86a5677c7200f::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

@@ -1,13 +1,16 @@
 {
-    "name":        "josantonius/hook",
-    "version":     "1.0.5",
+    "name":        "josantonius/json",
+    "version":     "1.1.2",
     "type":        "library",
-    "description": "Library for handling hooks.",
+    "description": "PHP simple library for managing Json files.",
     "keywords": [
-        "Hook",
-        "Actions",
-        "Action Hooks",
-        "HHVM",
+        "JSON", 
+        "HHVM", 
+        "File to array", 
+        "Array to file", 
+        "JavaScript Object Notation", 
+        "JavaScript", 
+        "Data exchange",
         "PHP"
     ],
     "license": "MIT",
@@ -20,7 +23,7 @@
         }
     ],
     "support": {
-        "source": "https://github.com/josantonius/php-hook"
+        "source": "https://github.com/josantonius/php-json"
     },
     "config": {
         "preferred-install": "dist"
@@ -31,12 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Josantonius\\Hook\\": "src/"
+            "Josantonius\\Json\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Josantonius\\Hook\\Tests\\": "tests/"
+            "Josantonius\\Json\\Tests\\": "tests/"
         }
     },
     "extra": {

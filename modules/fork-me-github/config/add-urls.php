@@ -12,13 +12,13 @@
 use Eliasis\App\App,
     Eliasis\Module\Module;
 
-$url = App::MODULES_URL() . Module::ForkMeGitHub('folder');
+$url = App::MODULES_URL() . Module::ForkMeGitHub()->get('folder');
 
 return [
 
     'url' => [
 
-        'css' => $url . 'public' . App::DS . 'css' . App::DS,
-        'js'  => $url . 'public' . App::DS . 'js'  . App::DS
+        'css' => $url . 'public/css/',
+        'js'  => $url . 'public/js/'
     ],
 ];

@@ -6,15 +6,15 @@
  * @copyright  Copyright (c) 2017
  * @license    https://opensource.org/licenses/MIT - The MIT License (MIT)
  * @link       https://github.com/Eliasis-Framework/Eliasis
- * @since      1.0.0
+ * @since      1.0.9
  */
-
-use Eliasis\App\App;
 
 return [
 
-    'eliasis' => [
+    'modules' => [
 
-        'version' => '1.1.0',
+        'default-state'  => 'active',
+        'default-action' => 'activation',
+        'states-file'    => '.modules-states.jsond',
     ],
 ];

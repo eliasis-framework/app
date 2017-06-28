@@ -21,7 +21,6 @@ return [
         'modules'  => $ROOT .'modules'.$DS,
         'public'   => $ROOT .'public' .$DS,
         'layout'   => $ROOT .'src'    .$DS.'template' . $DS . 'layout'   . $DS,
-        'pages'    => $ROOT .'src'    .$DS.'template' . $DS . 'pages'    . $DS,
-        'elements' => $ROOT .'src'    .$DS.'template' . $DS . 'elements' . $DS,
+        'page'     => $ROOT .'src'    .$DS.'template' . $DS . 'page'     . $DS,
     ],
 ];

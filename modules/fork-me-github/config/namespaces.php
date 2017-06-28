@@ -11,13 +11,13 @@
 
 use Eliasis\App\App;
 
-$namespace = App::getNamespace('modules');
+$namespace = App::get('namespaces', 'modules');
 
 $module = 'ForkMeGitHub';
 
 return [
 
-    'namespace' => [
+    'namespaces' => [
 
         'controller' => $namespace . $module . '\\Controller\\',
     ],

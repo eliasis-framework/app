@@ -11,12 +11,15 @@
 
 use Eliasis\Module\Module;
 
-$controller = Module::ForkMeGitHub('namespace', 'controller');
+$namespace = Module::ForkMeGitHub()->get('namespaces', 'controller');
+
+$class = 'ForkMeGitHub\\ForkMeGitHub';
 
 return [
 
     'hooks' => [
-        'css'        => $controller . 'ForkMeGitHub' . '@css',
-        'after-body' => $controller . 'ForkMeGitHub' . '@render',
+
+		['css',        [$namespace . $class, 'css']    , 8, 0],
+		['after-body', [$namespace . $class, 'render'] , 8, 0],
     ],
 ];

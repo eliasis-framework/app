@@ -11,12 +11,14 @@
 
 use Eliasis\Module\Module;
 
-$controller = Module::ForkMeGitHub('namespace', 'controller');
+$namespace = Module::ForkMeGitHub()->get('namespaces', 'controller');
+
+$class = 'ForkMeGitHub\\ForkMeGitHub';
 
 return [
 
     'routes' => [
 
-        'example' => $controller . 'ForkMeGitHub' . '@example',
+        'example' => $namespace . $class . '@example',
     ],
 ];

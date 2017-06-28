@@ -12,13 +12,14 @@
 use Eliasis\App\App,
 	Eliasis\Module\Module;
 
-$DS   = App::DS;
-$ROOT = Module::ForkMeGitHub('path');
+$DS = App::DS;
+
+$ROOT = Module::ForkMeGitHub()->get('path', 'root');
 
 return [
 
     'path' => [
 
-        'elements' => $ROOT .'src' . $DS .'template' . $DS . 'elements' . $DS,
+        'components' => $ROOT.'src'.$DS.'template'.$DS.'components'.$DS,
     ],
 ];

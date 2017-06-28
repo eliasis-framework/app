@@ -12,8 +12,9 @@
 
 namespace Josantonius\Router;
 
-use Josantonius\Url\Url,
-    Josantonius\Router\Exception\RouterException;
+use Josantonius\Url\Url;
+
+# use Josantonius\Router\Exception\RouterException;
 
 /**
  * Route handler.
@@ -29,7 +30,7 @@ class Router {
      *
      * @var boolean $halts
      */
-    public static $halts = true;
+    public static $halts = false;
 
     /**
      * Array of routes.
@@ -63,9 +64,9 @@ class Router {
      *
      * @since 1.0.0
      *
-     * @var null $errorCallback
+     * @var bool|int $errorCallback
      */
-    public static $errorCallback;
+    public static $errorCallback = false;
 
     /**
      * Requested route status.
@@ -121,10 +122,10 @@ class Router {
 
         $uri = $params[0];
         $callback = $params[1];
-               
-        array_push(static::$routes, $uri);
-        array_push(static::$methods, strtoupper($method));
-        array_push(static::$callbacks, $callback);
+
+        array_push(self::$routes, $uri);
+        array_push(self::$methods, strtoupper($method));
+        array_push(self::$callbacks, $callback);
     }
 
     /**
@@ -166,15 +167,18 @@ class Router {
     /**
      * Load routes with regular expressions if the route is not found.
      *
-     * @since 1.0.0
+     * @since 1.0.3
      */
-    public static function loadRegexRoutes() {
+    private static function _getRegexRoutes() {
 
         foreach (self::$routes as $key => $value) {
-                
+            
+            unset(self::$routes[$key]);
+            
             if (strpos($key, ':') !== false) {
 
                 Router::any($key, $value);
+
             }
         }
     }
@@ -188,19 +192,22 @@ class Router {
      */
     public static function error($callback) {
 
-        static::$errorCallback = $callback;
+        self::$errorCallback = $callback;
     }
 
     /**
-     * Don't load any further routes on match.
+     * Continue processing after match (true) or stopping it (false).
+     * Also can specify the number of total routes to process (int).
      *
-     * @since 1.0.0
+     * @since 1.0.4
      *
-     * @param boolean $flag
+     * @param boolean|int $value
      */
-    public static function haltOnMatch($flag = true) {
+    public static function keepLooking($value = true) {
 
-        static::$halts = $flag;
+        $value = (is_int($value)) ? $value - 1 : $value;
+
+        self::$halts = $value;
     }
 
     /**
@@ -210,57 +217,32 @@ class Router {
      */
     public static function dispatch() {
 
-        static::$uri = Url::addBackslash(Url::getUriMethods());
+        self::$uri = Url::getUriMethods();
 
-        static::_parseUrl();
+        self::_parseUrl();
 
-        static::_routeValidator();
+        self::$uri = Url::addBackslash(self::$uri);
 
-        static::$routes = str_replace('//', '/', static::$routes);
+        self::_routeValidator();
 
-        $found_route = false;
+        self::$routes = str_replace('//', '/', self::$routes);
 
-        if (in_array(static::$uri, static::$routes)) {
+        self::$foundRoute = false;
 
-            static::_checkRoutes();
+        if (in_array(self::$uri, self::$routes)) {
+
+            self::_checkRoutes();
 
         } else {
             
-            self::loadRegexRoutes();
+            self::_getRegexRoutes();
             
-            static::_checkRegexRoutes();
+            self::_checkRegexRoutes();
         }
 
-        if (!static::$foundRoute) {
+        if (!self::$foundRoute) {
 
-            if (!static::$errorCallback) {
-
-                static::$errorCallback = function () {
-
-                    /* Error page */
-                };
-            }
-
-            if (!is_object(static::$errorCallback)) {
-
-                static::invokeObject(
-                    static::$errorCallback, null, 'No routes found.'
-                );
-
-                if (static::$halts) {
-
-                    return;
-                }
-
-            } else {
-
-                call_user_func(static::$errorCallback);
-
-                if (static::$halts) {
-
-                    return;
-                }
-            }
+            self::_getErrorCallback();
         }
     }
 
@@ -273,25 +255,25 @@ class Router {
 
         $query = '';
 
-        $q_arr = array();
+        $data = array();
 
-        if (strpos(static::$uri, '&') > 0) {
+        if (strpos(self::$uri, '&') > 0) {
 
-            $query = substr(static::$uri, strpos(static::$uri, '&') + 1);
+            $query = substr(self::$uri, strpos(self::$uri, '&') + 1);
 
-            static::$uri = substr(static::$uri, 0, strpos(static::$uri, '&'));
+            self::$uri = substr(self::$uri, 0, strpos(self::$uri, '&'));
 
-            $q_arr = explode('&', $query);
+            $data = explode('&', $query);
 
-            foreach ($q_arr as $q) {
+            foreach ($data as $value) {
 
-                $qobj = explode('=', $q);
+                $params = explode('=', $value);
 
-                $q_arr[] = array($qobj[0] => $qobj[1]);
+                $data[] = array($params[0] => $params[1]);
 
-                if (!isset($_GET[$qobj[0]])) {
+                if (!isset($_GET[$params[0]])) {
 
-                    $_GET[$qobj[0]] = $qobj[1];
+                    $_GET[$params[0]] = $params[1];
                 }
             }
         }
@@ -308,29 +290,33 @@ class Router {
 
         $method = $_SERVER['REQUEST_METHOD'];
 
-        $route_pos = array_keys(static::$routes, static::$uri);
+        $route_pos = array_keys(self::$routes, self::$uri);
 
         foreach ($route_pos as $route) {
 
-            $methodRoute = static::$methods[$route];
+            self::$foundRoute = false;
+
+            $methodRoute = self::$methods[$route];
 
             if ($methodRoute == $method || $methodRoute == 'ANY') {
 
-                static::$foundRoute = true;
+                self::$foundRoute = true;
 
-                if (!is_object(static::$callbacks[$route])) {
+                if (!is_object(self::$callbacks[$route])) {
 
-                    static::invokeObject(static::$callbacks[$route]);
+                    self::invokeObject(self::$callbacks[$route]);
 
                 } else {
 
-                    call_user_func(static::$callbacks[$route]);
+                    call_user_func(self::$callbacks[$route]);
                 }
 
-                if (static::$halts) {
+                if (!self::$halts && !self::$halts > 0) {
 
                     return;
                 }
+
+                self::$halts--;
             }
         }
     }
@@ -348,45 +334,77 @@ class Router {
 
         $method = $_SERVER['REQUEST_METHOD'];
 
-        $searches = array_keys(static::$patterns);
+        $searches = array_keys(self::$patterns);
 
-        $replaces = array_values(static::$patterns);
+        $replaces = array_values(self::$patterns);
 
-        foreach (static::$routes as $route) {
+        foreach (self::$routes as $route) {
+
+            self::$foundRoute = false;
 
             $route = str_replace($searches, $replaces, $route);
 
-            if (preg_match('#^' . $route . '$#', static::$uri, $matched)) {
+            $route = Url::addBackslash($route);
 
-                $methodRoute = static::$methods[$pos];
+            if (preg_match('#^' . $route . '$#', self::$uri, $matched)) {
 
-                if (!$methodRoute == $method || !$methodRoute == 'ANY') {
+                $methodRoute = self::$methods[$pos];
 
-                    $pos++;
+                if ($methodRoute == $method || $methodRoute == 'ANY') {
+ 
+                    self::$foundRoute = true;
 
-                    continue;
-                }
+                    $matched = explode('/', trim($matched[0], '/'));
 
-                static::$foundRoute = true;
+                    array_shift($matched);
 
-                array_shift($matched);
+                    if (!is_object(self::$callbacks[$pos])) {
 
-                if (!is_object(static::$callbacks[$pos])) {
+                        self::invokeObject(
+                            self::$callbacks[$pos], 
+                            $matched
+                        );
 
-                    static::invokeObject(static::$callbacks[$pos], $matched);
+                    } else {
 
-                } else {
+                        call_user_func_array(
+                            self::$callbacks[$pos],
+                            $matched
+                        );
+                    }
 
-                    call_user_func_array(static::$callbacks[$pos], $matched);
-                }
+                    if (!self::$halts) {
+                        
+                        return;
+                    }
 
-               if (static::$halts) {
-
-                    return;
+                    self::$halts--;
                 }
             }
 
             $pos++;
+        }
+    }
+
+    /**
+     * Get error callback if route does not exists.
+     *
+     * @since 1.0.3
+     */
+    private static function _getErrorCallback() {
+
+        if (!self::$errorCallback) {
+
+            self::$errorCallback = function () { /* Set errors */ };
+        }
+
+        if (!is_object(self::$errorCallback)) {
+
+            self::invokeObject(self::$errorCallback);
+        
+        } else {
+
+            call_user_func(self::$errorCallback);
         }
     }
 
@@ -403,9 +421,8 @@ class Router {
      *
      * @param object $callback
      * @param array  $matched  → array of matched parameters
-     * @param string $msg
      */
-    public static function invokeObject($callback, $matched=null, $msg=null) {
+    protected static function invokeObject($callback, $matched = null) {
 
         $last = explode('/', $callback);
         $last = end($last);
@@ -416,8 +433,6 @@ class Router {
         $method  = $segments[1];
         $matched = $matched ? $matched : [];
 
-        $instance = $class::getInstance();
-
         if (method_exists($class, self::$_singleton)) {
 
             $instance = call_user_func([$class, self::$_singleton]); 
@@ -425,9 +440,12 @@ class Router {
             return call_user_func_array([$instance, $method], $matched);
         }
 
-        $instance = new $class;
+        if (class_exists($class)) {
 
-        return call_user_func_array([$instance, $method], $matched);
+            $instance = new $class;
+
+            return call_user_func_array([$instance, $method], $matched);
+        }
     }
 
     /**
@@ -437,9 +455,9 @@ class Router {
      */
     private static function _routeValidator() {
 
-        if (!is_null(self::getRoute(static::$uri))) {
+        if (!is_null(self::getRoute(self::$uri))) {
 
-            static::any(static::$uri, self::$routes[static::$uri]);
+            self::any(self::$uri, self::$routes[self::$uri]);
         }  
     }
 }
