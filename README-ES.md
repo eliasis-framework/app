@@ -8,14 +8,18 @@
 
 ---
 
-- [Instalación](#instalación)
 - [Requisitos](#requisitos)
+- [Instalación](#instalación)
 - [Contribuir](#contribuir)
 - [Licencia](#licencia)
 - [Copyright](#copyright)
 
 ---
 Estructura básica de aplicación creada con [Eliasis Framework](https://github.com/Eliasis-Framework/Eliasis).
+
+## Requisitos
+
+Este framework es soportado por versiones de **PHP 5.6** o superiores y es compatible con versiones de **HHVM 3.0** o superiores.
 
 ## Instalación 
 
@@ -25,21 +29,12 @@ Puedes instalar esta aplicación utilizando [Composer](http://getcomposer.org/do
     $ cd app
     $ composer install
 
-El comando anterior sólo instalará los archivos necesarios, si prefieres descargar todo el código fuente (incluyendo tests, directorio vendor, excepciones no utilizadas, documentos...) puedes utilizar:
+El comando anterior sólo instalará los archivos necesarios, si prefieres **descargar todo el código fuente** puedes utilizar:
 
     $ composer create-project --prefer-source eliasis-framework/app
+
     $ cd app
     $ composer install
-
-También puedes clonar el repositorio completo con Git:
-
-	$ git clone https://github.com/Eliasis-Framework/App.git
-    $ cd App
-    $ composer install
-
-## Requisitos
-
-Este framework es soportado por versiones de PHP 5.6 o superiores y es compatible con versiones de HHVM 3.0 o superiores.
 
 ## Contribuir
 
