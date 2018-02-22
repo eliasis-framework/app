@@ -8,8 +8,11 @@
  * @link      https://github.com/Eliasis-Framework/App
  * @since     1.0.0
  */
+use Eliasis\Framework\View;
+use Josantonius\Asset\Asset;
 use Josantonius\Hook\Hook;
 
+$data = View::getOption();
 ?>
 <!DOCTYPE html>
 
@@ -19,10 +22,10 @@ use Josantonius\Hook\Hook;
         <!-- Site meta -->
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta charset="utf-8">
-        <?php Hook::doAction('meta') ?> 
+        <?= Hook::doAction('meta') ?> 
         <!-- Title -->
-        <title>Eliasis PHP Framework</title>
+        <title><?= $data['title'] ?></title>
 
         <!-- CSS -->
-        <?php Hook::doAction('css') ?>
+        <?= Asset::outputStyles() ?>
     </head>

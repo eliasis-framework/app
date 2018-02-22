@@ -8,6 +8,7 @@
  * @link      https://github.com/Eliasis-Framework/App
  * @since     1.0.5
  */
+use Eliasis\Complement\Type\Module;
 use Eliasis\Framework\App;
 
 $cssUrl = App::getOption('url', 'css');
@@ -23,12 +24,24 @@ return [
                 'version' => '1.0.0',
                 'footer' => true
             ],
+            'eliasisComplements' => [
+                'name' => 'eliasisComplements',
+                'url' => Module::script(),
+                'attr' => 'defer',
+                'version' => '1.0.0',
+                'footer' => true
+            ],
         ],
 
         'css' => [
             'sampleApp' => [
                 'name' => 'sampleApp',
                 'url' => $cssUrl . 'sample-app.css',
+                'version' => '1.0.0'
+            ],
+            'eliasisComplements' => [
+                'name' => 'eliasisComplements',
+                'url' => Module::style(),
                 'version' => '1.0.0'
             ],
         ],

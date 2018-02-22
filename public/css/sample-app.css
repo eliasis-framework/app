@@ -26,6 +26,9 @@ h3 {
   margin-top: -66px;
 }
 
+.vmm-btn--uninstall {
+  display: none;
+}
 
 /**
  * Animated butterfly logo 

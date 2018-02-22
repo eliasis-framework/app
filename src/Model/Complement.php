@@ -8,13 +8,13 @@
  * @link      https://github.com/Eliasis-Framework/App
  * @since     1.0.0
  */
-use Josantonius\Asset\Asset;
-use Josantonius\Hook\Hook;
-?>      
-        <?= Hook::doAction('footer') ?>
+namespace App\Model;
 
-        <?= Asset::outputScripts('footer') ?>
-  
-    </body>
+use Eliasis\Framework\Model;
 
-</html>
+/**
+ * Complement model.
+ */
+class Complement extends Model
+{
+}

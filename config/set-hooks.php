@@ -1,6 +1,6 @@
 <?php
 /**
- * Eliasis PHP Framework application
+ * Eliasis PHP Framework application.
  *
  * @author    Josantonius <hello@josantonius.com>
  * @copyright 2017 - 2018 (c) Josantonius - Eliasis Framework Application
@@ -12,11 +12,11 @@ use Eliasis\Framework\App;
 
 $namespace = App::getOption('namespaces', 'controller');
 
-$class = 'Home';
-
 return [
     'hooks' => [
-        ['css', [$namespace . $class, 'css'], 8, 0],
-        ['js',  [$namespace . $class, 'js'], 8, 0],
+        ['meta', [$namespace . 'Home', 'meta'], 8, 0],
+        ['header',  [$namespace . 'Home', 'header'], 8, 0],
+        ['after-body', [$namespace . 'Home', 'afterBody'], 8, 0],
+        ['footer',  [$namespace . 'Home', 'footer'], 8, 0],
     ],
 ];

@@ -10,24 +10,16 @@
  */
 namespace App\Controller;
 
+use Eliasis\Complement\Type\Module;
 use Eliasis\Framework\App;
 use Eliasis\Framework\Controller;
 use Josantonius\Asset\Asset;
-use Josantonius\Hook\Hook;
 
 /**
  * Home controller.
  */
-class Home extends Controller
+class Complement extends Controller
 {
-    /**
-     * Actions for meta hook.
-     */
-    public function meta()
-    {
-        return "<!-- meta hook -->\n";
-    }
-
     /**
      * Styles.
      */
@@ -36,6 +28,7 @@ class Home extends Controller
         $css = App::getOption('assets', 'css');
 
         Asset::add('style', $css['sampleApp']);
+        Asset::add('style', $css['eliasisComplements']);
     }
 
     /**
@@ -45,23 +38,7 @@ class Home extends Controller
     {
         $js = App::getOption('assets', 'js');
 
-        Asset::add('script', $js['sampleApp']);
-    }
-
-    /**
-     * Actions for afterbody hook.
-     */
-    public function afterBody()
-    {
-        return "<!-- afterBody hook -->\n";
-    }
-
-    /**
-     * Actions for footer hook.
-     */
-    public function footer()
-    {
-        return "<!-- footer hook -->\n";
+        Asset::add('script', $js['eliasisComplements']);
     }
 
     /**
@@ -71,21 +48,13 @@ class Home extends Controller
     {
         $this->css();
         $this->js();
-        
-        $pageData = [
-            'title' => 'ELIASIS',
-            'subtitle' => 'PHP Framework'
-        ];
 
-        $headerData = [
-            'title' => 'Eliasis PHP Framework'
-        ];
-
-        $page = App::getOption('path', 'page');
         $layout = App::getOption('path', 'layout');
 
-        $this->view->renderizate($layout, 'header', $headerData);
-        $this->view->renderizate($page, 'home', $pageData);
+        $this->view->renderizate($layout, 'header');
+
+        Module::render();
+
         $this->view->renderizate($layout, 'footer');
     }
 }

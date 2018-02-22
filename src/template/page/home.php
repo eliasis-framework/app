@@ -8,25 +8,30 @@
  * @link      https://github.com/Eliasis-Framework/App
  * @since     1.0.0
  */
+use Eliasis\Framework\View;
 use Josantonius\Hook\Hook;
 
+$data = View::getOption();
 ?>
+
     <body>
-        <?php Hook::doAction('after-body'); ?>
+
+        <?= Hook::doAction('after-body'); ?>
 
         <!--
          * Animated butterfly logo 
          * @author  Varga László
          * @link    http://codepen.io/_lacus/pen/EVBeYM
         -->
-        <div class='loading_animation'>
-            <div class='butterfly'>
-                <div class="content">
-                    <h1>ELIASIS</h1>
-                    <h3>PHP Framework</h3>
+        <a href="complements" "email me">
+            <div class='loading_animation'>
+                <div class='butterfly'>
+                    <div class="content">
+                        <h1><?= $data['title'] ?></h1>
+                        <h3><?= $data['subtitle'] ?></h3>
+                    </div>
+                    <div class='wingL'></div>
+                    <div class='wingR'></div>
                 </div>
-                <div class='wingL'></div>
-                <div class='wingR'></div>
             </div>
-        </div>
-
+        </a>
