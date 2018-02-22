@@ -1,6 +1,6 @@
 # Eliasis PHP Framework application
 
-[![Latest Stable Version](https://poser.pugx.org/eliasis-framework/app/v/stable)](https://packagist.org/packages/eliasis-framework/app) [![Total Downloads](https://poser.pugx.org/eliasis-framework/app/downloads)](https://packagist.org/packages/eliasis-framework/app) [![Latest Unstable Version](https://poser.pugx.org/eliasis-framework/app/v/unstable)](https://packagist.org/packages/eliasis-framework/app) [![License](https://poser.pugx.org/eliasis-framework/app/license)](https://packagist.org/packages/eliasis-framework/app)
+[![Latest Stable Version](https://poser.pugx.org/eliasis-framework/app/v/stable)](https://packagist.org/packages/eliasis-framework/app) [![Total Downloads](https://poser.pugx.org/eliasis-framework/app/downloads)](https://packagist.org/packages/eliasis-framework/app) [![Latest Unstable Version](https://poser.pugx.org/eliasis-framework/app/v/unstable)](https://packagist.org/packages/eliasis-framework/app) [![PSR2](https://img.shields.io/badge/PSR-2-1abc9c.svg)](http://www.php-fig.org/psr/psr-2/) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/) [![License](https://poser.pugx.org/eliasis-framework/app/license)](https://packagist.org/packages/eliasis-framework/app)
 
 [English version](README-ES.md)
 
@@ -15,42 +15,54 @@
 - [Copyright](#copyright)
 
 ---
-Estructura para crear aplicaciones con [Eliasis Framework](https://github.com/Eliasis-Framework/Eliasis).
+Estructura básica de aplicación creada con [Eliasis Framework](https://github.com/Eliasis-Framework/Eliasis).
 
-### Instalación 
+## Instalación 
 
 Puedes instalar esta aplicación utilizando [Composer](http://getcomposer.org/download/).
 
     $ composer create-project --prefer-dist eliasis-framework/app
+    $ cd app
+    $ composer install
 
 El comando anterior sólo instalará los archivos necesarios, si prefieres descargar todo el código fuente (incluyendo tests, directorio vendor, excepciones no utilizadas, documentos...) puedes utilizar:
 
     $ composer create-project --prefer-source eliasis-framework/app
+    $ cd app
+    $ composer install
 
 También puedes clonar el repositorio completo con Git:
 
 	$ git clone https://github.com/Eliasis-Framework/App.git
+    $ cd App
+    $ composer install
 
-### Requisitos
+## Requisitos
 
 Este framework es soportado por versiones de PHP 5.6 o superiores y es compatible con versiones de HHVM 3.0 o superiores.
 
-### Contribuir
-1. Comprobar si hay incidencias abiertas o abrir una nueva para iniciar una discusión en torno a un fallo o función.
-1. Bifurca la rama del repositorio en GitHub para iniciar la operación de ajuste.
-1. Escribe una o más pruebas para la nueva característica o expón el error.
-1. Haz cambios en el código para implementar la característica o reparar el fallo.
-1. Envía pull request para fusionar los cambios y que sean publicados.
+## Contribuir
 
-Esto está pensado para proyectos grandes y de larga duración.
+Si deseas colaborar, puedes echar un vistazo a la lista de
+[issues](https://github.com/Eliasis-Framework/Eliasis/issues) o [tareas pendientes](#-tareas-pendientes).
 
-### Licencia
+**Pull requests**
+
+* [Fork and clone](https://help.github.com/articles/fork-a-repo).
+* Ejecuta el comando `composer install` para instalar dependencias.
+  Esto también instalará las [dependencias de desarrollo](https://getcomposer.org/doc/03-cli.md#install).
+* Ejecuta el comando `composer fix` para estandarizar el código.
+* Ejecuta las [pruebas](#tests).
+* Crea una nueva rama (**branch**), **commit**, **push** y envíame un
+  [pull request](https://help.github.com/articles/using-pull-requests).
+
+## Licencia
 
 Este proyecto está licenciado bajo **licencia MIT**. Consulta el archivo [LICENSE](LICENSE) para más información.
 
-### Copyright
+## Copyright
 
-2017 Josantonius, [josantonius.com](https://josantonius.com/)
+2017 - 2018 Josantonius, [josantonius.com](https://josantonius.com/)
 
 Si te ha resultado útil, házmelo saber :wink:
 

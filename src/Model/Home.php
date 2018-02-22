@@ -8,4 +8,13 @@
  * @link      https://github.com/Eliasis-Framework/App
  * @since     1.0.0
  */
-require 'public/index.php';
+namespace App\Model;
+
+use Eliasis\Framework\Model;
+
+/**
+ * Home model.
+ */
+class Home extends Model
+{
+}

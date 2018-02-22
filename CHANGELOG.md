@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.5 - 2018-02-22
+
+* Eliasis Framework has been updated to version 1.1.3.
+
 ## 1.0.4 - 2017-06-28
 
 * Eliasis Framework has been updated to version 1.1.0.
