@@ -4,7 +4,7 @@
 
 [Spanish version](README-ES.md)
 
-![image](https://github.com/Eliasis-Framework/Eliasis/blob/master/resources/eliasis-php-framework.png)
+![image](https://github.com/eliasis-framework/eliasis/blob/master/resources/eliasis-php-framework.png)
 
 ---
 
@@ -16,7 +16,7 @@
 
 ---
 
-A skeleton for creating applications with [Eliasis Framework](https://github.com/Eliasis-Framework/Eliasis).
+A skeleton for creating applications with [Eliasis Framework](https://github.com/eliasis-framework/eliasis).
 
 ## Requirements
 
@@ -38,7 +38,7 @@ The previous command will only install the necessary files, if you prefer to **d
 ## Contribute
 
 If you would like to help, please take a look at the list of
-[issues](https://github.com/Eliasis-Framework/Eliasis/issues) or the [To Do](#-todo) checklist.
+[issues](https://github.com/eliasis-framework/eliasis/issues) or the [To Do](#-todo) checklist.
 
 **Pull requests**
 

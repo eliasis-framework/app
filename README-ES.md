@@ -4,7 +4,7 @@
 
 [English version](README-ES.md)
 
-![image](https://github.com/Eliasis-Framework/Eliasis/blob/master/resources/eliasis-php-framework.png)
+![image](https://github.com/eliasis-framework/eliasis/blob/master/resources/eliasis-php-framework.png)
 
 ---
 
@@ -15,7 +15,7 @@
 - [Copyright](#copyright)
 
 ---
-Estructura básica de aplicación creada con [Eliasis Framework](https://github.com/Eliasis-Framework/Eliasis).
+Estructura básica de aplicación creada con [Eliasis Framework](https://github.com/eliasis-framework/eliasis).
 
 ## Requisitos
 
@@ -39,7 +39,7 @@ El comando anterior sólo instalará los archivos necesarios, si prefieres **des
 ## Contribuir
 
 Si deseas colaborar, puedes echar un vistazo a la lista de
-[issues](https://github.com/Eliasis-Framework/Eliasis/issues) o [tareas pendientes](#-tareas-pendientes).
+[issues](https://github.com/eliasis-framework/eliasis/issues) o [tareas pendientes](#-tareas-pendientes).
 
 **Pull requests**
 
