@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.6 - 2018-05-07
+
+* `DIRECTORY_SEPARATOR` was added to the paths to avoid incompatibilities with Windows paths.
+
 ## 1.0.5 - 2018-02-22
 
 * Eliasis Framework has been updated to version 1.1.3.
