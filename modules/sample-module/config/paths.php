@@ -10,13 +10,11 @@
  */
 use Eliasis\Framework\App;
 
-$DS = APP::DS;
-
-$rootPath = App::MODULES() . 'sample-module' . $DS;
+$rootPath = App::MODULES() . 'sample-module/';
 
 return [
     'path' => [
-        'layout' => $rootPath . 'src' . $DS . 'template' . $DS . 'layout' . $DS,
-        'page' => $rootPath . 'src' . $DS . 'template' . $DS . 'page' . $DS,
+        'layout' => $rootPath . 'src/template/layout/',
+        'page' => $rootPath . 'src/template/page/',
     ],
 ];

@@ -2,7 +2,7 @@
 
 ## 1.0.6 - 2018-05-07
 
-* `DIRECTORY_SEPARATOR` was added to the paths to avoid incompatibilities with Windows paths.
+* Eliasis Framework has been updated to version 1.1.4.
 
 ## 1.0.5 - 2018-02-22
 

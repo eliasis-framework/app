@@ -10,18 +10,16 @@
  */
 use Eliasis\Framework\App;
 
-$DS = App::DS;
-
 $rootPath = App::ROOT();
 
 return [
     'path' => [
-        'components' => $rootPath . 'components' . $DS,
-        'modules' => $rootPath . 'modules' . $DS,
-        'plugins' => $rootPath . 'plugins' . $DS,
-        'templates' => $rootPath . 'templates' . $DS,
-        'public' => $rootPath . 'public' . $DS,
-        'layout' => $rootPath . 'src' . $DS . 'template' . $DS . 'layout' . $DS,
-        'page' => $rootPath . 'src' . $DS . 'template' . $DS . 'page' . $DS,
+        'components' => $rootPath . 'components/',
+        'modules' => $rootPath . 'modules/',
+        'plugins' => $rootPath . 'plugins/',
+        'templates' => $rootPath . 'templates/',
+        'public' => $rootPath . 'public/',
+        'layout' => $rootPath . 'src/template/layout/',
+        'page' => $rootPath . 'src/template/page/',
     ],
 ];
