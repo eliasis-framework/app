@@ -1,6 +1,7 @@
 # Eliasis PHP Framework application
 
-[![Latest Stable Version](https://poser.pugx.org/eliasis-framework/app/v/stable)](https://packagist.org/packages/eliasis-framework/app) [![Total Downloads](https://poser.pugx.org/eliasis-framework/app/downloads)](https://packagist.org/packages/eliasis-framework/app) [![Latest Unstable Version](https://poser.pugx.org/eliasis-framework/app/v/unstable)](https://packagist.org/packages/eliasis-framework/app) [![PSR2](https://img.shields.io/badge/PSR-2-1abc9c.svg)](http://www.php-fig.org/psr/psr-2/) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/) [![License](https://poser.pugx.org/eliasis-framework/app/license)](https://packagist.org/packages/eliasis-framework/app)
+[![Latest Stable Version](https://poser.pugx.org/eliasis-framework/app/v/stable)](https://packagist.org/packages/eliasis-framework/app)
+[![License](https://poser.pugx.org/eliasis-framework/app/license)](https://packagist.org/packages/eliasis-framework/app)
 
 [Spanish version](README-ES.md)
 
@@ -10,9 +11,8 @@
 
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Contribute](#contribute)
+- [Sponsor](#Sponsor)
 - [License](#license)
-- [Copyright](#copyright)
 
 ---
 
@@ -26,38 +26,22 @@ This framework is supported by **PHP versions 5.6** or higher and is compatible 
 
 You can install this application using [Composer](http://getcomposer.org/download/).
 
-    $ composer create-project --prefer-dist eliasis-framework/app
+    composer create-project --prefer-dist eliasis-framework/app
 
 The previous command will only install the necessary files, if you prefer to **download the entire source code** you can use:
 
-    $ composer create-project --prefer-source eliasis-framework/app
+    composer create-project --prefer-source eliasis-framework/app
 
-    $ cd app
-    $ composer install
+    cd app
+    composer install
 
-## Contribute
+## Sponsor
 
-If you would like to help, please take a look at the list of
-[issues](https://github.com/eliasis-framework/eliasis/issues) or the [To Do](#-todo) checklist.
-
-**Pull requests**
-
-* [Fork and clone](https://help.github.com/articles/fork-a-repo).
-* Run the command `composer install` to install the dependencies.
-  This will also install the [dev dependencies](https://getcomposer.org/doc/03-cli.md#install).
-* Run the command `composer fix` to excute code standard fixers.
-* Run the [tests](#tests).
-* Create a **branch**, **commit**, **push** and send me a
-  [pull request](https://help.github.com/articles/using-pull-requests).
+If this project helps you to reduce your development time,
+[you can sponsor me](https://github.com/josantonius#sponsor) to support my open source work :blush:
 
 ## License
 
-This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
+This repository is licensed under the [MIT License](LICENSE).
 
-## Copyright
-
-2017 - 2018 Josantonius, [josantonius.com](https://josantonius.com/)
-
-If you find it useful, let me know :wink:
-
-You can contact me on [Twitter](https://twitter.com/Josantonius) or through my [email](mailto:hello@josantonius.com).
+Copyright © 2017-2022, [Josantonius](https://github.com/josantonius#contact)

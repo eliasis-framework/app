@@ -7,6 +7,8 @@ artifacts/
 vendor/
 docs/_build
 docs/*.pyc
-.git*/
 .idea
 .DS_STORE
+.repository.md
+.vscode/
+app.code-workspace
